@@ -37,14 +37,6 @@ Aqui estão centralizadas informações sobre painéis, modelos de dados, fontes
 
     [:octicons-arrow-right-24: Consultar padrões](boas_praticas/modelo_documentacao.md)
 
--   :material-palette-outline:{ .lg .middle } **Identidade Visual**
-
-    ---
-
-    Diretrizes de cores, elementos visuais e identidade utilizada nos dashboards da SMS.
-
-    [:octicons-arrow-right-24: Ver identidade visual](design/manual_marca/id_visual.md)
-
 </div>
 
 ---
