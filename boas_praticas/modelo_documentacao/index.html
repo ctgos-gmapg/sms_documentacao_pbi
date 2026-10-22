@@ -1,0 +1,1204 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica e funcional dos painéis de Inteligência da GMAPG">
+      
+      
+        <meta name="author" content="Breno Almeida">
+      
+      
+      
+        <link rel="prev" href="../../configuracoes/conexoes/api_sheets_json/">
+      
+      
+        <link rel="next" href="../../design/manual_marca/id_visual/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Documentação - Documentação Power BI — CTGOS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#padrao-de-documentacao-dos-projetos-power-bi" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Documentação Power BI — CTGOS" class="md-header__button md-logo" aria-label="Documentação Power BI — CTGOS" data-md-component="logo">
+      
+  <img src="../../design/manual_marca/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentação Power BI — CTGOS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentação
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentação Power BI — CTGOS" class="md-nav__button md-logo" aria-label="Documentação Power BI — CTGOS" data-md-component="logo">
+      
+  <img src="../../design/manual_marca/logo.png" alt="logo">
+
+    </a>
+    Documentação Power BI — CTGOS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painéis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Painéis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piso da Enfermagem
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Piso da Enfermagem
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paineis/piso_enfermagem_pbi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paineis/piso_enfermagem_pbi/docs/01_contexto_do_sistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contexto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paineis/piso_enfermagem_pbi/docs/02_sistemas_de_origem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fontes de dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paineis/piso_enfermagem_pbi/docs/03_modelo_semantico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo semântico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paineis/piso_enfermagem_pbi/docs/04_transformacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paineis/piso_enfermagem_pbi/docs/05_qualidade_dos_dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qualidade dos dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paineis/piso_enfermagem_pbi/docs/06_pontos_de_atencao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pontos de atenção
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paineis/piso_enfermagem_pbi/engenharia_dados/relacionamentos_do_modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relacionamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvimento
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolvimento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuracoes/conexoes/api_sheets_json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google Sheets via JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Boas Práticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Boas Práticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentação
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-esperada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura esperada
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/manual_marca/id_visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidade visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-esperada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura esperada
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="padrao-de-documentacao-dos-projetos-power-bi">Padrão de Documentação dos Projetos Power BI</h1>
+<p>Este documento define a estrutura recomendada para documentação dos projetos Power BI armazenados neste repositório.</p>
+<p>A documentação deve ser construída a partir dos arquivos exportados em formato PBIP, utilizando o modelo semântico, relacionamentos, consultas, tabelas, medidas e demais artefatos do projeto como fonte técnica.</p>
+<p>O objetivo é complementar os arquivos do Power BI com informações de contexto, regras de negócio, fluxo de dados e pontos importantes para manutenção.</p>
+<hr />
+<h2 id="estrutura-esperada">Estrutura esperada</h2>
+<p>Cada painel deve possuir uma pasta própria dentro de:</p>
+<div class="highlight"><pre><span></span><code>paineis/
+</code></pre></div>
+<p>Exemplo:</p>
+<p><div class="highlight"><pre><span></span><code>paineis/
+└── nome_do_painel_pbi/
+</code></pre></div>
+Deve ter sempre _pbi no final, com o objetivo de indicar que é um arquivo Power BI.</p>
+<p>A estrutura recomendada é:</p>
+<div class="highlight"><pre><span></span><code>nome_do_painel/
+├── docs/
+├── powerbi/
+├── scripts/
+└── README.md
+</code></pre></div>
+<hr />
+<h1 id="docs"><code>docs/</code></h1>
+<p>A pasta <code>docs/</code> concentra toda a documentação funcional e técnica do projeto.</p>
+<p>A documentação pode ser dividida em grupos de acordo com o conteúdo.</p>
+<hr />
+<h2 id="docsdicionario"><code>docs/dicionario/</code></h2>
+<p>Contém a documentação relacionada ao entendimento dos dados e do modelo.</p>
+<p>Estrutura recomendada:</p>
+<div class="highlight"><pre><span></span><code>docs/
+└── dicionario/
+    ├── dicionario_de_dados.md
+    ├── 01_contexto_do_sistema.md
+    ├── 02_sistemas_de_origem.md
+    ├── 03_modelo_semantico.md
+    ├── 04_transformacoes.md
+    ├── 05_qualidade_dos_dados.md
+    └── 06_pontos_de_atencao.md
+</code></pre></div>
+<h3 id="dicionario_de_dadosmd"><code>dicionario_de_dados.md</code></h3>
+<p>Deve apresentar as principais tabelas, campos e significados utilizados no modelo.</p>
+<p>Não é necessário documentar campos técnicos irrelevantes.</p>
+<p>Priorizar:</p>
+<ul>
+<li>campos utilizados nos relatórios;</li>
+<li>chaves;</li>
+<li>datas;</li>
+<li>indicadores;</li>
+<li>status;</li>
+<li>campos calculados;</li>
+<li>campos relevantes para regras de negócio.</li>
+</ul>
+<hr />
+<h3 id="01_contexto_do_sistemamd"><code>01_contexto_do_sistema.md</code></h3>
+<p>Deve explicar o contexto funcional do painel.</p>
+<p>Incluir:</p>
+<ul>
+<li>finalidade do painel;</li>
+<li>problema que ele resolve;</li>
+<li>área responsável;</li>
+<li>público-alvo;</li>
+<li>principais processos acompanhados;</li>
+<li>escopo da solução.</li>
+</ul>
+<hr />
+<h3 id="02_sistemas_de_origemmd"><code>02_sistemas_de_origem.md</code></h3>
+<p>Deve listar as fontes utilizadas pelo projeto.</p>
+<p>Exemplos:</p>
+<ul>
+<li>PostgreSQL;</li>
+<li>APIs;</li>
+<li>Google Sheets;</li>
+<li>Excel;</li>
+<li>sistemas internos;</li>
+<li>arquivos externos.</li>
+</ul>
+<p>Sempre que possível, informar:</p>
+<div class="highlight"><pre><span></span><code>Sistema:
+Tipo da fonte:
+Banco:
+Schema:
+Tabela/View:
+Modo de conexão:
+Periodicidade:
+</code></pre></div>
+<p>Não devem ser armazenadas senhas, tokens ou credenciais.</p>
+<hr />
+<h3 id="03_modelo_semanticomd"><code>03_modelo_semantico.md</code></h3>
+<p>Deve explicar a estrutura lógica do modelo semântico.</p>
+<p>Incluir:</p>
+<ul>
+<li>tabelas fato;</li>
+<li>dimensões;</li>
+<li>tabelas auxiliares;</li>
+<li>principais medidas;</li>
+<li>organização do modelo;</li>
+<li>granularidade das principais tabelas.</li>
+</ul>
+<p>O arquivo deve complementar os arquivos <code>.tmdl</code> disponíveis no projeto.</p>
+<hr />
+<h3 id="04_transformacoesmd"><code>04_transformacoes.md</code></h3>
+<p>Deve registrar tratamentos realizados antes ou durante a carga dos dados.</p>
+<p>Exemplos:</p>
+<ul>
+<li>filtros;</li>
+<li>substituições;</li>
+<li>junções;</li>
+<li>normalizações;</li>
+<li>conversões de tipo;</li>
+<li>criação de colunas;</li>
+<li>regras implementadas no Power Query;</li>
+<li>tratamentos em SQL.</li>
+</ul>
+<p>Documentar principalmente transformações que alterem o significado do dado.</p>
+<hr />
+<h3 id="05_qualidade_dos_dadosmd"><code>05_qualidade_dos_dados.md</code></h3>
+<p>Deve registrar problemas conhecidos relacionados à qualidade dos dados.</p>
+<p>Exemplos:</p>
+<ul>
+<li>campos nulos;</li>
+<li>duplicidades;</li>
+<li>inconsistências;</li>
+<li>divergências entre sistemas;</li>
+<li>ausência de padronização;</li>
+<li>registros incompletos;</li>
+<li>limitações da fonte.</li>
+</ul>
+<hr />
+<h3 id="06_pontos_de_atencaomd"><code>06_pontos_de_atencao.md</code></h3>
+<p>Deve registrar aspectos importantes para manutenção.</p>
+<p>Exemplos:</p>
+<ul>
+<li>dependências externas;</li>
+<li>limitações técnicas;</li>
+<li>regras sensíveis;</li>
+<li>tabelas críticas;</li>
+<li>configurações específicas;</li>
+<li>mudanças que podem impactar o relatório.</li>
+</ul>
+<hr />
+<h1 id="docsengenharia_dados"><code>docs/engenharia_dados/</code></h1>
+<p>Contém informações técnicas relacionadas ao fluxo e à estrutura dos dados.</p>
+<p>Estrutura sugerida:</p>
+<div class="highlight"><pre><span></span><code>docs/
+└── engenharia_dados/
+    ├── conexoes_e_fluxo.md
+    └── relacionamentos_do_modelo.md
+</code></pre></div>
+<hr />
+<h3 id="conexoes_e_fluxomd"><code>conexoes_e_fluxo.md</code></h3>
+<p>Deve descrever como os dados percorrem a solução.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Sistema de origem
+       ↓
+Banco de dados
+       ↓
+View SQL
+       ↓
+Power Query
+       ↓
+Modelo Semântico
+       ↓
+Relatório Power BI
+</code></pre></div>
+<p>Quando houver outras integrações:</p>
+<div class="highlight"><pre><span></span><code>Google Sheets
+       ↓
+Apps Script
+       ↓
+JSON
+       ↓
+Power BI
+</code></pre></div>
+<hr />
+<h3 id="relacionamentos_do_modelomd"><code>relacionamentos_do_modelo.md</code></h3>
+<p>Deve explicar os principais relacionamentos entre as tabelas.</p>
+<p>Priorizar:</p>
+<ul>
+<li>relacionamento entre fatos e dimensões;</li>
+<li>cardinalidade;</li>
+<li>direção de filtro;</li>
+<li>relacionamentos inativos;</li>
+<li>relacionamentos especiais;</li>
+<li>tabelas ponte.</li>
+</ul>
+<p>Não é necessário reproduzir todos os relacionamentos quando forem autoexplicativos.</p>
+<hr />
+<h3 id="imagens"><code>imagens/</code></h3>
+<p>Utilizada para armazenar imagens relacionadas à documentação.</p>
+<p>Exemplos:</p>
+<ul>
+<li>diagrama do modelo;</li>
+<li>arquitetura;</li>
+<li>fluxo de dados;</li>
+<li>relacionamento entre sistemas;</li>
+<li>capturas relevantes do Power BI.</li>
+</ul>
+<hr />
+<h1 id="powerbi"><code>powerbi/</code></h1>
+<p>Contém os arquivos do projeto exportado em formato PBIP.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>powerbi/
+└── semantic-model/
+    ├── tables/
+    ├── database.tmdl
+    ├── expressions.tmdl
+    ├── model.tmdl
+    └── relationships.tmdl
+</code></pre></div>
+<p>Esses arquivos representam a fonte técnica do projeto.</p>
+<p>A documentação não deve simplesmente duplicar o conteúdo dos arquivos TMDL.</p>
+<p>Deve explicar o contexto e as decisões que não são evidentes ao analisar apenas o código.</p>
+<hr />
+<h1 id="scripts"><code>scripts/</code></h1>
+<p>Contém scripts auxiliares relacionados ao projeto.</p>
+<p>Exemplos:</p>
+<div class="highlight"><pre><span></span><code>scripts/
+├── auditar_modelo_semantico.py
+├── extrair_medidas.py
+├── validar_relacionamentos.py
+└── gerar_documentacao.py
+</code></pre></div>
+<p>Os scripts devem possuir nomes que indiquem claramente sua finalidade.</p>
+<hr />
+<h1 id="readmemd"><code>README.md</code></h1>
+<p>O <code>README.md</code> deve ser o ponto de entrada da documentação do painel.</p>
+<p>Deve conter uma visão resumida do projeto e apontar para os documentos mais detalhados.</p>
+<p>Estrutura recomendada:</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># Nome do Painel</span>
+
+<span class="gu">## Visão geral</span>
+
+Descrição resumida do painel.
+
+<span class="gu">## Estrutura</span>
+
+<span class="k">-</span><span class="w"> </span><span class="sb">`docs/`</span> — documentação funcional e técnica
+<span class="k">-</span><span class="w"> </span><span class="sb">`powerbi/`</span> — arquivos do projeto PBIP
+<span class="k">-</span><span class="w"> </span><span class="sb">`scripts/`</span> — scripts auxiliares
+
+<span class="gu">## Documentação</span>
+
+<span class="gu">### Dados</span>
+
+<span class="k">-</span><span class="w"> </span>Contexto do sistema
+<span class="k">-</span><span class="w"> </span>Sistemas de origem
+<span class="k">-</span><span class="w"> </span>Modelo semântico
+<span class="k">-</span><span class="w"> </span>Transformações
+<span class="k">-</span><span class="w"> </span>Qualidade dos dados
+<span class="k">-</span><span class="w"> </span>Pontos de atenção
+
+<span class="gu">### Engenharia de dados</span>
+
+<span class="k">-</span><span class="w"> </span>Conexões e fluxo
+<span class="k">-</span><span class="w"> </span>Relacionamentos do modelo
+</code></pre></div>
+<hr />
+<h1 id="principio-da-documentacao">Princípio da documentação</h1>
+<p>Os arquivos <em>PBIP</em> devem ser considerados a fonte técnica do projeto.</p>
+<p>A documentação deve responder principalmente às perguntas:</p>
+<ul>
+<li>O que este painel faz?</li>
+<li>De onde vêm os dados?</li>
+<li>Como os dados são transformados?</li>
+<li>Como o modelo está organizado?</li>
+<li>Quais regras não são óbvias?</li>
+<li>Quais problemas de qualidade existem?</li>
+<li>Quais pontos precisam de atenção?</li>
+<li>O que outro profissional precisa saber para manter este projeto?</li>
+</ul>
+<hr />
+<h1 id="o-que-evitar">O que evitar</h1>
+<p>Evitar documentações que apenas repitam informações já disponíveis nos arquivos <code>.tmdl</code>.</p>
+<p>Por exemplo, não é necessário listar todas as colunas de uma tabela apenas porque elas existem no modelo.</p>
+<p>Priorizar informações que agreguem contexto.</p>
+<hr />
+<h1 id="regra-geral">Regra geral</h1>
+<p>A documentação deve funcionar como complemento ao PBIP.</p>
+<p>O projeto deve ser compreensível utilizando:</p>
+<div class="highlight"><pre><span></span><code>PBIP
++
+Documentação
++
+Scripts auxiliares
+</code></pre></div>
+<p>O conjunto deve permitir que outro integrante da equipe consiga entender e manter o painel sem depender exclusivamente do desenvolvedor original.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

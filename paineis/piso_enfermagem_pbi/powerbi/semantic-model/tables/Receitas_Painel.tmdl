@@ -1,0 +1,369 @@
+table Receitas_Painel
+	lineageTag: f8914443-cdcb-4c47-bde4-b394983e609b
+
+	column id_receita_dados
+		dataType: int64
+		formatString: 0
+		lineageTag: d8ea0dbf-0551-4ca7-9d24-cef00753bced
+		summarizeBy: sum
+		sourceColumn: id_receita_dados
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_unidade
+		dataType: int64
+		formatString: 0
+		lineageTag: f49f0a17-71ab-4e8d-9559-48d4bf292d21
+		summarizeBy: none
+		sourceColumn: cod_unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_contrato
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b8bd421-6e42-415f-a927-00a57c6ef88b
+		summarizeBy: sum
+		sourceColumn: id_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_mes
+		dataType: string
+		lineageTag: a02729e5-fdc3-4d73-aa2c-ff603da226ba
+		summarizeBy: none
+		sourceColumn: ref_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 2352588b-f905-4ce1-8e06-33fdb8ef49f2
+		summarizeBy: sum
+		sourceColumn: ref_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_receita_item
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f961621-e743-495e-ac9f-fdd2cffe0ae2
+		summarizeBy: sum
+		sourceColumn: id_receita_item
+
+		annotation SummarizationSetBy = Automatic
+
+	column flg_ativo
+		dataType: string
+		lineageTag: bf3efe87-1c5e-42aa-a2a2-260a6f99249e
+		summarizeBy: none
+		sourceColumn: flg_ativo
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor
+		dataType: int64
+		formatString: 0
+		lineageTag: 624a49ad-0bc0-47ec-b851-27cee1e3be33
+		summarizeBy: sum
+		sourceColumn: valor
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_conta_bancaria
+		dataType: int64
+		formatString: 0
+		lineageTag: 4264381a-f436-4006-9684-2d57bfd634b2
+		summarizeBy: sum
+		sourceColumn: id_conta_bancaria
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_termo_aditivo
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b6b5359-c3d5-4012-82dc-901e56d256fd
+		summarizeBy: sum
+		sourceColumn: id_termo_aditivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricaoUnidade
+		dataType: string
+		lineageTag: 2becae82-56ab-4937-a425-c1fbc34bbd56
+		summarizeBy: none
+		sourceColumn: descricaoUnidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column numeroContrato
+		dataType: string
+		lineageTag: 3efa9c76-a1d9-4896-b44c-9a292f9e4dfc
+		summarizeBy: none
+		sourceColumn: numeroContrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricaoReceitaItem
+		dataType: string
+		lineageTag: 1bd2d2ff-0c1d-4abe-9ca6-957f3c836672
+		summarizeBy: none
+		sourceColumn: descricaoReceitaItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricaoBanco
+		dataType: string
+		lineageTag: 94485e72-acbb-4c65-ac9c-2ee6ba095efa
+		summarizeBy: none
+		sourceColumn: descricaoBanco
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricaoAgencia
+		dataType: string
+		lineageTag: 187dfdfe-397c-402d-a8aa-3182ce60da54
+		summarizeBy: none
+		sourceColumn: descricaoAgencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricaoContaCorrente
+		dataType: string
+		lineageTag: e135f630-4cf5-453b-98ec-8993719d2d4a
+		summarizeBy: none
+		sourceColumn: descricaoContaCorrente
+
+		annotation SummarizationSetBy = Automatic
+
+	column budgetMngtFixedValue
+		dataType: double
+		lineageTag: 09e6ccbb-5df0-45c3-a4ce-28e07e69c26e
+		summarizeBy: sum
+		sourceColumn: budgetMngtFixedValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column budgetMngtVariable1Value
+		dataType: double
+		lineageTag: 1ae474fa-4522-4302-af5f-ab46be410eeb
+		summarizeBy: sum
+		sourceColumn: budgetMngtVariable1Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column budgetAddCustTAValue
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: d715c666-1e32-44dc-987b-a2fa77521799
+		summarizeBy: sum
+		sourceColumn: budgetAddCustTAValue
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column budgetAddInvesTAValue
+		dataType: double
+		lineageTag: 8f6b6e6c-c4ef-4328-9700-68ba2fb22be9
+		summarizeBy: sum
+		sourceColumn: budgetAddInvesTAValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column investmentsValue
+		dataType: double
+		lineageTag: a7165f10-ebc8-415f-9e49-9b1b6cd71f19
+		summarizeBy: sum
+		sourceColumn: investmentsValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expensesReverseValue
+		dataType: double
+		lineageTag: 1ad54d66-a1b7-42e2-a2a6-4b6e7cc37688
+		summarizeBy: sum
+		sourceColumn: expensesReverseValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column externalResourcesValue
+		dataType: double
+		lineageTag: e8f1c0e7-ef16-42c1-a4d7-1cfc32287875
+		summarizeBy: sum
+		sourceColumn: externalResourcesValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column loanReverseValue
+		dataType: double
+		lineageTag: 0ea6ef35-d37f-48a7-9a40-9e5e244b78a3
+		summarizeBy: sum
+		sourceColumn: loanReverseValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column loanAnotherContractValue
+		dataType: double
+		lineageTag: bd0288d7-e767-407b-acde-17aa4a1b0219
+		summarizeBy: sum
+		sourceColumn: loanAnotherContractValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column budgetMngtVariable2Value
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a0d214c-e2d4-4988-824e-c00905af3d20
+		summarizeBy: sum
+		sourceColumn: budgetMngtVariable2Value
+
+		annotation SummarizationSetBy = Automatic
+
+	column budgetMngtVariable3Value
+		dataType: int64
+		formatString: 0
+		lineageTag: eb46ed6a-bc24-4c17-8a64-c18d0a1601ec
+		summarizeBy: sum
+		sourceColumn: budgetMngtVariable3Value
+
+		annotation SummarizationSetBy = Automatic
+
+	column transferAccountContractExecValue
+		dataType: double
+		lineageTag: 541843bd-4169-4949-9ab6-75c799e510ac
+		summarizeBy: sum
+		sourceColumn: transferAccountContractExecValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column transferResourceAnotherContractValue
+		dataType: double
+		lineageTag: 354df3ce-cfbf-4fbc-904e-4bca4d3d6e71
+		summarizeBy: sum
+		sourceColumn: transferResourceAnotherContractValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column repaymentIntegrasusValue
+		dataType: int64
+		formatString: 0
+		lineageTag: c6301b18-6d76-47d7-a077-507a2f89c683
+		summarizeBy: sum
+		sourceColumn: repaymentIntegrasusValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column totalValue
+		dataType: double
+		lineageTag: 9359ea72-819b-45bb-9abb-ee43b60e9c0e
+		summarizeBy: sum
+		sourceColumn: totalValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column multId
+		dataType: string
+		lineageTag: a8660366-82ac-4301-8d84-0d568d1373ec
+		summarizeBy: none
+		sourceColumn: multId
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_usuario
+		dataType: int64
+		formatString: 0
+		lineageTag: aee97fda-a9d0-435a-a1b0-07d858bc01e3
+		summarizeBy: sum
+		sourceColumn: cod_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_alteracao
+		dataType: string
+		lineageTag: 72a55627-60d5-431c-819f-8534a012a7d1
+		summarizeBy: none
+		sourceColumn: data_alteracao
+
+		annotation SummarizationSetBy = Automatic
+
+	column deliveryReport
+		dataType: string
+		lineageTag: 4a61b9e1-6fc3-42a2-97c4-532c432879b9
+		summarizeBy: none
+		sourceColumn: deliveryReport
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID = Receitas_Painel[cod_unidade]&Receitas_Painel[numeroContrato]&Receitas_Painel[ref_ano]&"-"&Receitas_Painel[ref_mes]
+		lineageTag: fdf00fcc-4236-4e61-8a7e-dc5c03d22ee9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano_Mes_Ref = DATE(Receitas_Painel[ref_ano], VALUE(Receitas_Painel[ref_mes]), 1)
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 2a12046f-4715-4590-bf88-8c14ad9252ee
+		summarizeBy: none
+
+	column Chave_Contrato = Receitas_Painel[cod_unidade] & "|" & Receitas_Painel[numeroContrato]
+		dataType: string
+		lineageTag: 5e9751bd-36df-4d17-8f98-4a97501f318a
+		summarizeBy: none
+
+	partition Receitas_Painel = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\Windows 11\Documents\Dash Piso Amanda\receitas_painel.xlsx"), null, true),
+				    Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Column1", Int64.Type}, {"id_receita_dados", Int64.Type}, {"cod_unidade", Int64.Type}, {"id_contrato", Int64.Type}, {"ref_mes", Int64.Type}, {"ref_ano", Int64.Type}, {"id_receita_item", Int64.Type}, {"flg_ativo", type text}, {"valor", Int64.Type}, {"id_conta_bancaria", Int64.Type}, {"id_termo_aditivo", Int64.Type}, {"descricaoUnidade", type text}, {"numeroContrato", type text}, {"descricaoReceitaItem", type text}, {"descricaoBanco", type text}, {"descricaoAgencia", type text}, {"descricaoContaCorrente", type text}, {"budgetMngtFixedValue", type number}, {"budgetMngtVariable1Value", type number}, {"budgetAddCustTAValue", Int64.Type}, {"budgetAddInvesTAValue", type number}, {"investmentsValue", type number}, {"expensesReverseValue", type number}, {"externalResourcesValue", type number}, {"loanReverseValue", type number}, {"loanAnotherContractValue", type number}, {"budgetMngtVariable2Value", Int64.Type}, {"budgetMngtVariable3Value", Int64.Type}, {"transferAccountContractExecValue", type number}, {"transferResourceAnotherContractValue", type number}, {"repaymentIntegrasusValue", Int64.Type}, {"totalValue", type number}, {"multId", type text}, {"cod_usuario", Int64.Type}, {"data_alteracao", type any}, {"deliveryReport", type any}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Column1"}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Colunas Removidas", each ([budgetAddCustTAValue] <> 0)),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"ref_mes", type text}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado1","2","02",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído","3","03",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","4","04",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","5","05",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Valor Substituído3","6","06",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído5" = Table.ReplaceValue(#"Valor Substituído4","7","07",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído6" = Table.ReplaceValue(#"Valor Substituído5","8","08",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído7" = Table.ReplaceValue(#"Valor Substituído6","9","09",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído8" = Table.ReplaceValue(#"Valor Substituído7","1","01",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído9" = Table.ReplaceValue(#"Valor Substituído8","0102","12",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído10" = Table.ReplaceValue(#"Valor Substituído9","010","10",Replacer.ReplaceText,{"ref_mes"}),
+				    #"Valor Substituído11" = Table.ReplaceValue(#"Valor Substituído10","101","11",Replacer.ReplaceText,{"ref_mes"})
+				in
+				    #"Valor Substituído11"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

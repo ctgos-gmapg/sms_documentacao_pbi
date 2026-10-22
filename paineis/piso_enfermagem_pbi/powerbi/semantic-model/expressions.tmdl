@@ -1,0 +1,140 @@
+expression 'Erros em Repasses' =
+		let
+		Fonte = Repasses,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		    #"Erros Removidos" = Table.RemoveRowsWithErrors(#"Colunas Reordenadas", {"DATA DE PAGAMENTO"})
+		in
+		    #"Erros Removidos"
+	lineageTag: c1224d94-178b-43a6-9c21-a8796ecb0bef
+	queryGroup: 'Erros na Consulta - 22/09/2026 16:12:13'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em Repasses (2)' =
+		let
+		Fonte = Repasses,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		    #"Erros Removidos" = Table.RemoveRowsWithErrors(#"Colunas Reordenadas", {"DATA DE PAGAMENTO"})
+		in
+		  #"Erros Removidos"
+	lineageTag: 2a2442f6-1707-49f9-91a9-2cdae45d8425
+	queryGroup: 'Erros na Consulta - 22/09/2026 16:13:05'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em Repasses (3)' =
+		let
+		Fonte = Repasses,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		    #"DATA DE PAGAMENTO" = #"Colunas Reordenadas"{0}[DATA DE PAGAMENTO]
+		in
+		  #"DATA DE PAGAMENTO"
+	lineageTag: 8ce444df-8193-4f35-8559-fad038138816
+	queryGroup: 'Erros na Consulta - 30/09/2026 10:49:19'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Exception
+
+expression 'Erros em Repasses (4)' =
+		let
+		Fonte = Repasses,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"})
+		in
+		  #"Colunas Reordenadas"
+	lineageTag: 53191e1b-ffce-4710-8901-9c303bdbe860
+	queryGroup: 'Erros na Consulta - 30/09/2026 16:08:18'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em Repasses (5)' =
+		let
+		Fonte = Repasses,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1)
+		in
+		    #"Índice Adicionado"
+	lineageTag: 9ca2fb14-5089-43dc-9a62-f8aa0ee90227
+	queryGroup: 'Erros na Consulta - 30/09/2026 16:27:57'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em Repasses (6)' =
+		let
+		Fonte = Repasses,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "UG", "UNIDADE", "FAVORECIDO", "INSTRUMENTO", "SUBSECRETARIA", "PROCESSO SEI", "EXERCÍCIO", "TERMO ADITIVO", "NATUREZA DE DESPESA", "DOCUMENTO DE REPASSE", "DOC.SEI DOCUMENTO REPASSE", "DOC.SEI RESPONSÁVEL ASSINATURA ELD", "EMPENHO", "FONTE", "COMPETÊNCIA", "VALOR", "Nº NL", "EMISSOR DA NL", "Nº NL ANULADA", "STATUS", "Nº DA PD", "DATA DA PD", "EMISSOR DA PD", "Nº PD ANULADA", "GD", "BLOQUEIO", "DATA DE PAGAMENTO", "DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", "QUANTIDADE DE FRAGILIDADE", "OBSERVAÇÃO"}),
+		    UG = #"Colunas Reordenadas"{0}[UG]
+		in
+		  UG
+	lineageTag: fecc5cab-348b-4c79-8332-d12d309b252e
+	queryGroup: 'Erros na Consulta - 30/09/2026 16:42:45'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Exception
+

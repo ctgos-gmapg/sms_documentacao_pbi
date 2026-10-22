@@ -1,0 +1,1790 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica e funcional dos painéis de Inteligência da GMAPG">
+      
+      
+        <meta name="author" content="Breno Almeida">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Dicionário de dados - Documentação Power BI — CTGOS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dicionario-de-dados" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../../../.." title="Documentação Power BI — CTGOS" class="md-header__button md-logo" aria-label="Documentação Power BI — CTGOS" data-md-component="logo">
+      
+  <img src="../../../../../design/manual_marca/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentação Power BI — CTGOS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dicionário de dados
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Documentação Power BI — CTGOS" class="md-nav__button md-logo" aria-label="Documentação Power BI — CTGOS" data-md-component="logo">
+      
+  <img src="../../../../../design/manual_marca/logo.png" alt="logo">
+
+    </a>
+    Documentação Power BI — CTGOS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painéis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Painéis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piso da Enfermagem
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Piso da Enfermagem
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_contexto_do_sistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contexto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_sistemas_de_origem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fontes de dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_modelo_semantico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo semântico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_transformacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_qualidade_dos_dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qualidade dos dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_pontos_de_atencao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pontos de atenção
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../engenharia_dados/relacionamentos_do_modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relacionamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvimento
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolvimento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../configuracoes/conexoes/api_sheets_json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google Sheets via JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Boas Práticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Boas Práticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../boas_praticas/modelo_documentacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../design/manual_marca/id_visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidade visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repasses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repasses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receitas_painel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Receitas_Painel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#despesas_painel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Despesas_Painel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#piso_enfermagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Piso_Enfermagem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensões
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dimensões">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dim_contrato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_contrato
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_instituicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_instituição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-auxiliar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela auxiliar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabela auxiliar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#medida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medida
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observações
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dicionario-de-dados">Dicionário de dados</h1>
+<p>Catálogo técnico e funcional do modelo semântico. Cada coluna aparece em uma linha com seu tipo e sua descrição. A origem é informada uma vez por tabela.</p>
+<h2 id="repasses"><code>Repasses</code></h2>
+<p><strong>Origem:</strong> Google Sheets publicado como CSV, processado por <code>Web.Contents</code> e <code>Csv.Document</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UG</code></td>
+<td><code>int64</code></td>
+<td>Código da unidade gestora responsável pelo repasse.</td>
+</tr>
+<tr>
+<td><code>UNIDADE</code></td>
+<td><code>string</code></td>
+<td>Nome ou identificação da unidade administrativa.</td>
+</tr>
+<tr>
+<td><code>FAVORECIDO</code></td>
+<td><code>string</code></td>
+<td>Pessoa ou organização favorecida pelo repasse.</td>
+</tr>
+<tr>
+<td><code>INSTRUMENTO</code></td>
+<td><code>string</code></td>
+<td>Instrumento administrativo que fundamenta o repasse.</td>
+</tr>
+<tr>
+<td><code>SUBSECRETARIA</code></td>
+<td><code>string</code></td>
+<td>Subsecretaria responsável pelo registro.</td>
+</tr>
+<tr>
+<td><code>PROCESSO SEI</code></td>
+<td><code>string</code></td>
+<td>Identificador do processo no SEI.</td>
+</tr>
+<tr>
+<td><code>EXERCÍCIO</code></td>
+<td><code>int64</code></td>
+<td>Ano fiscal do registro.</td>
+</tr>
+<tr>
+<td><code>TERMO ADITIVO</code></td>
+<td><code>string</code></td>
+<td>Identificação do termo aditivo associado.</td>
+</tr>
+<tr>
+<td><code>NATUREZA DE DESPESA</code></td>
+<td><code>string</code></td>
+<td>Classificação orçamentária da despesa.</td>
+</tr>
+<tr>
+<td><code>DOCUMENTO DE REPASSE</code></td>
+<td><code>string</code></td>
+<td>Identificação do documento de repasse.</td>
+</tr>
+<tr>
+<td><code>DOC.SEI DOCUMENTO REPASSE</code></td>
+<td><code>int64</code></td>
+<td>Número do documento SEI do repasse.</td>
+</tr>
+<tr>
+<td><code>DOC.SEI RESPONSÁVEL ASSINATURA ELD</code></td>
+<td><code>int64</code></td>
+<td>Número do documento SEI relacionado ao responsável pela assinatura.</td>
+</tr>
+<tr>
+<td><code>EMPENHO</code></td>
+<td><code>string</code></td>
+<td>Número ou identificação do empenho.</td>
+</tr>
+<tr>
+<td><code>FONTE</code></td>
+<td><code>int64</code></td>
+<td>Código da fonte de recursos.</td>
+</tr>
+<tr>
+<td><code>COMPETÊNCIA</code></td>
+<td><code>string</code></td>
+<td>Período de competência informado na origem.</td>
+</tr>
+<tr>
+<td><code>VALOR</code></td>
+<td><code>double</code></td>
+<td>Valor financeiro do repasse.</td>
+</tr>
+<tr>
+<td><code>Nº NL</code></td>
+<td><code>string</code></td>
+<td>Número da nota de liquidação.</td>
+</tr>
+<tr>
+<td><code>EMISSOR DA NL</code></td>
+<td><code>string</code></td>
+<td>Emissor da nota de liquidação.</td>
+</tr>
+<tr>
+<td><code>Nº NL ANULADA</code></td>
+<td><code>string</code></td>
+<td>Número da nota de liquidação anulada, quando houver.</td>
+</tr>
+<tr>
+<td><code>STATUS</code></td>
+<td><code>string</code></td>
+<td>Situação atual do registro.</td>
+</tr>
+<tr>
+<td><code>Nº DA PD</code></td>
+<td><code>string</code></td>
+<td>Número da programação de desembolso.</td>
+</tr>
+<tr>
+<td><code>DATA DA PD</code></td>
+<td><code>string</code></td>
+<td>Data da programação de desembolso conforme recebida da fonte.</td>
+</tr>
+<tr>
+<td><code>EMISSOR DA PD</code></td>
+<td><code>string</code></td>
+<td>Emissor da programação de desembolso.</td>
+</tr>
+<tr>
+<td><code>Nº PD ANULADA</code></td>
+<td><code>string</code></td>
+<td>Número da programação de desembolso anulada, quando houver.</td>
+</tr>
+<tr>
+<td><code>GD</code></td>
+<td><code>string</code></td>
+<td>Identificador ou classificação GD da origem.</td>
+</tr>
+<tr>
+<td><code>BLOQUEIO</code></td>
+<td><code>string</code></td>
+<td>Indicador ou motivo de bloqueio do registro.</td>
+</tr>
+<tr>
+<td><code>DATA DE PAGAMENTO</code></td>
+<td><code>dateTime</code></td>
+<td>Data efetiva do pagamento.</td>
+</tr>
+<tr>
+<td><code>DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA</code></td>
+<td><code>dateTime</code></td>
+<td>Data de devolução do processo à subsecretaria.</td>
+</tr>
+<tr>
+<td><code>QUANTIDADE DE FRAGILIDADE</code></td>
+<td><code>int64</code></td>
+<td>Quantidade de ocorrências de fragilidade registrada.</td>
+</tr>
+<tr>
+<td><code>OBSERVAÇÃO</code></td>
+<td><code>string</code></td>
+<td>Observações livres sobre o repasse.</td>
+</tr>
+<tr>
+<td><code>Codigo_OS</code></td>
+<td><code>int64</code></td>
+<td>Código numérico padronizado da organização social, calculado por regra DAX.</td>
+</tr>
+<tr>
+<td><code>ID</code></td>
+<td><code>string</code></td>
+<td>Identificador composto do registro, formado pela concatenação de campos de negócio.</td>
+</tr>
+<tr>
+<td><code>Ano_Mes_Ref</code></td>
+<td><code>dateTime</code></td>
+<td>Primeiro dia do mês de referência usado no calendário.</td>
+</tr>
+<tr>
+<td><code>Chave_Contrato</code></td>
+<td><code>string</code></td>
+<td>Chave composta usada para relacionar organização social e contrato.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="receitas_painel"><code>Receitas_Painel</code></h2>
+<p><strong>Origem:</strong> arquivo Excel local <code>receitas_painel.xlsx</code>, aba <code>Sheet1</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_receita_dados</code></td>
+<td><code>int64</code></td>
+<td>Identificador do registro de dados de receita.</td>
+</tr>
+<tr>
+<td><code>cod_unidade</code></td>
+<td><code>int64</code></td>
+<td>Código da unidade associada à receita.</td>
+</tr>
+<tr>
+<td><code>id_contrato</code></td>
+<td><code>int64</code></td>
+<td>Identificador do contrato.</td>
+</tr>
+<tr>
+<td><code>ref_mes</code></td>
+<td><code>string</code></td>
+<td>Mês de referência da receita, normalizado no Power Query.</td>
+</tr>
+<tr>
+<td><code>ref_ano</code></td>
+<td><code>int64</code></td>
+<td>Ano de referência da receita.</td>
+</tr>
+<tr>
+<td><code>id_receita_item</code></td>
+<td><code>int64</code></td>
+<td>Identificador do item de receita.</td>
+</tr>
+<tr>
+<td><code>flg_ativo</code></td>
+<td><code>string</code></td>
+<td>Indicador de registro ativo.</td>
+</tr>
+<tr>
+<td><code>valor</code></td>
+<td><code>int64</code></td>
+<td>Valor principal registrado para a receita.</td>
+</tr>
+<tr>
+<td><code>id_conta_bancaria</code></td>
+<td><code>int64</code></td>
+<td>Identificador da conta bancária.</td>
+</tr>
+<tr>
+<td><code>id_termo_aditivo</code></td>
+<td><code>int64</code></td>
+<td>Identificador do termo aditivo.</td>
+</tr>
+<tr>
+<td><code>descricaoUnidade</code></td>
+<td><code>string</code></td>
+<td>Descrição da unidade.</td>
+</tr>
+<tr>
+<td><code>numeroContrato</code></td>
+<td><code>string</code></td>
+<td>Número do contrato.</td>
+</tr>
+<tr>
+<td><code>descricaoReceitaItem</code></td>
+<td><code>string</code></td>
+<td>Descrição do item de receita.</td>
+</tr>
+<tr>
+<td><code>descricaoBanco</code></td>
+<td><code>string</code></td>
+<td>Nome ou descrição do banco.</td>
+</tr>
+<tr>
+<td><code>descricaoAgencia</code></td>
+<td><code>string</code></td>
+<td>Descrição da agência bancária.</td>
+</tr>
+<tr>
+<td><code>descricaoContaCorrente</code></td>
+<td><code>string</code></td>
+<td>Descrição da conta corrente.</td>
+</tr>
+<tr>
+<td><code>budgetMngtFixedValue</code></td>
+<td><code>double</code></td>
+<td>Valor fixo de gestão orçamentária.</td>
+</tr>
+<tr>
+<td><code>budgetMngtVariable1Value</code></td>
+<td><code>double</code></td>
+<td>Primeiro componente variável de gestão orçamentária.</td>
+</tr>
+<tr>
+<td><code>budgetAddCustTAValue</code></td>
+<td><code>double</code></td>
+<td>Valor adicional de custeio do termo aditivo.</td>
+</tr>
+<tr>
+<td><code>budgetAddInvesTAValue</code></td>
+<td><code>double</code></td>
+<td>Valor adicional de investimento do termo aditivo.</td>
+</tr>
+<tr>
+<td><code>investmentsValue</code></td>
+<td><code>double</code></td>
+<td>Valor de investimentos.</td>
+</tr>
+<tr>
+<td><code>expensesReverseValue</code></td>
+<td><code>double</code></td>
+<td>Valor de reversão de despesas.</td>
+</tr>
+<tr>
+<td><code>externalResourcesValue</code></td>
+<td><code>double</code></td>
+<td>Valor de recursos externos.</td>
+</tr>
+<tr>
+<td><code>loanReverseValue</code></td>
+<td><code>double</code></td>
+<td>Valor de reversão de empréstimo.</td>
+</tr>
+<tr>
+<td><code>loanAnotherContractValue</code></td>
+<td><code>double</code></td>
+<td>Valor transferido de outro contrato.</td>
+</tr>
+<tr>
+<td><code>budgetMngtVariable2Value</code></td>
+<td><code>int64</code></td>
+<td>Segundo componente variável de gestão orçamentária.</td>
+</tr>
+<tr>
+<td><code>budgetMngtVariable3Value</code></td>
+<td><code>int64</code></td>
+<td>Terceiro componente variável de gestão orçamentária.</td>
+</tr>
+<tr>
+<td><code>transferAccountContractExecValue</code></td>
+<td><code>double</code></td>
+<td>Valor transferido para execução contratual.</td>
+</tr>
+<tr>
+<td><code>transferResourceAnotherContractValue</code></td>
+<td><code>double</code></td>
+<td>Recurso transferido de outro contrato.</td>
+</tr>
+<tr>
+<td><code>repaymentIntegrasusValue</code></td>
+<td><code>int64</code></td>
+<td>Valor de devolução ou ressarcimento Integrasus.</td>
+</tr>
+<tr>
+<td><code>totalValue</code></td>
+<td><code>double</code></td>
+<td>Valor total calculado ou informado para a receita.</td>
+</tr>
+<tr>
+<td><code>multId</code></td>
+<td><code>string</code></td>
+<td>Identificador múltiplo da origem.</td>
+</tr>
+<tr>
+<td><code>cod_usuario</code></td>
+<td><code>int64</code></td>
+<td>Código do usuário responsável pela alteração.</td>
+</tr>
+<tr>
+<td><code>data_alteracao</code></td>
+<td><code>string</code></td>
+<td>Data da última alteração conforme recebida da origem.</td>
+</tr>
+<tr>
+<td><code>deliveryReport</code></td>
+<td><code>string</code></td>
+<td>Relatório ou informação de entrega do registro.</td>
+</tr>
+<tr>
+<td><code>ID</code></td>
+<td><code>string</code></td>
+<td>Identificador composto do registro.</td>
+</tr>
+<tr>
+<td><code>Ano_Mes_Ref</code></td>
+<td><code>dateTime</code></td>
+<td>Primeiro dia do mês de referência.</td>
+</tr>
+<tr>
+<td><code>Chave_Contrato</code></td>
+<td><code>string</code></td>
+<td>Chave composta de organização social e contrato.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="despesas_painel"><code>Despesas_Painel</code></h2>
+<p><strong>Origem:</strong> arquivo Excel local <code>despesas_painel.xlsx</code>, aba <code>Planilha1</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Num_Seq</code></td>
+<td><code>int64</code></td>
+<td>Número sequencial do registro.</td>
+</tr>
+<tr>
+<td><code>Nome_Os</code></td>
+<td><code>string</code></td>
+<td>Nome da organização social.</td>
+</tr>
+<tr>
+<td><code>Nome_Unidade</code></td>
+<td><code>string</code></td>
+<td>Nome da unidade.</td>
+</tr>
+<tr>
+<td><code>Num_Contrato</code></td>
+<td><code>string</code></td>
+<td>Número do contrato.</td>
+</tr>
+<tr>
+<td><code>Ano_Mes_Ref</code></td>
+<td><code>dateTime</code></td>
+<td>Mês de referência da despesa.</td>
+</tr>
+<tr>
+<td><code>Tipo_Documento</code></td>
+<td><code>string</code></td>
+<td>Tipo do documento financeiro.</td>
+</tr>
+<tr>
+<td><code>Cnpj</code></td>
+<td><code>string</code></td>
+<td>CNPJ relacionado ao documento ou favorecido.</td>
+</tr>
+<tr>
+<td><code>Razao</code></td>
+<td><code>string</code></td>
+<td>Razão social do favorecido.</td>
+</tr>
+<tr>
+<td><code>Cpf</code></td>
+<td><code>string</code></td>
+<td>CPF relacionado ao documento ou favorecido.</td>
+</tr>
+<tr>
+<td><code>Nome</code></td>
+<td><code>string</code></td>
+<td>Nome da pessoa ou entidade favorecida.</td>
+</tr>
+<tr>
+<td><code>Serie</code></td>
+<td><code>int64</code></td>
+<td>Série do documento fiscal ou financeiro.</td>
+</tr>
+<tr>
+<td><code>Descricao</code></td>
+<td><code>string</code></td>
+<td>Descrição do documento ou lançamento.</td>
+</tr>
+<tr>
+<td><code>Documeto_Existe</code></td>
+<td><code>string</code></td>
+<td>Indicador de existência do documento.</td>
+</tr>
+<tr>
+<td><code>Data_Emissao</code></td>
+<td><code>dateTime</code></td>
+<td>Data de emissão do documento.</td>
+</tr>
+<tr>
+<td><code>Data_Vencimento</code></td>
+<td><code>dateTime</code></td>
+<td>Data de vencimento do documento.</td>
+</tr>
+<tr>
+<td><code>Data_Pagamento</code></td>
+<td><code>dateTime</code></td>
+<td>Data de pagamento da despesa.</td>
+</tr>
+<tr>
+<td><code>Data_Apuracao</code></td>
+<td><code>dateTime</code></td>
+<td>Data de apuração da despesa.</td>
+</tr>
+<tr>
+<td><code>Valor_Documento</code></td>
+<td><code>double</code></td>
+<td>Valor total do documento.</td>
+</tr>
+<tr>
+<td><code>Valor_Pago</code></td>
+<td><code>double</code></td>
+<td>Valor efetivamente pago.</td>
+</tr>
+<tr>
+<td><code>Despesa</code></td>
+<td><code>string</code></td>
+<td>Categoria ou descrição da despesa.</td>
+</tr>
+<tr>
+<td><code>Rubrica</code></td>
+<td><code>string</code></td>
+<td>Rubrica orçamentária.</td>
+</tr>
+<tr>
+<td><code>Pmt_Mes</code></td>
+<td><code>int64</code></td>
+<td>Parcela ou pagamento acumulado no mês.</td>
+</tr>
+<tr>
+<td><code>Pmt_Total</code></td>
+<td><code>int64</code></td>
+<td>Total de parcelas ou pagamentos.</td>
+</tr>
+<tr>
+<td><code>Flg_Justificativa</code></td>
+<td><code>string</code></td>
+<td>Indicador de existência de justificativa.</td>
+</tr>
+<tr>
+<td><code>Conta_Corrente</code></td>
+<td><code>string</code></td>
+<td>Conta corrente utilizada.</td>
+</tr>
+<tr>
+<td><code>Nome_Agencia</code></td>
+<td><code>string</code></td>
+<td>Nome ou identificação da agência.</td>
+</tr>
+<tr>
+<td><code>Nome_Banco</code></td>
+<td><code>string</code></td>
+<td>Nome do banco.</td>
+</tr>
+<tr>
+<td><code>Validado</code></td>
+<td><code>string</code></td>
+<td>Indicador de validação do registro.</td>
+</tr>
+<tr>
+<td><code>COD_OS</code></td>
+<td><code>string</code></td>
+<td>Código da organização social na origem.</td>
+</tr>
+<tr>
+<td><code>Column1</code></td>
+<td><code>string</code></td>
+<td>Coluna auxiliar preservada da planilha de origem.</td>
+</tr>
+<tr>
+<td><code>ID</code></td>
+<td><code>string</code></td>
+<td>Identificador composto do registro.</td>
+</tr>
+<tr>
+<td><code>Chave_Contrato</code></td>
+<td><code>string</code></td>
+<td>Chave composta de organização social e contrato.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="piso_enfermagem"><code>Piso_Enfermagem</code></h2>
+<p><strong>Origem:</strong> PostgreSQL <code>ctgos</code>, tabela <code>public.rh_pisoenfermagem</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pe_cpf</code></td>
+<td><code>string</code></td>
+<td>CPF do profissional.</td>
+</tr>
+<tr>
+<td><code>pe_nome</code></td>
+<td><code>string</code></td>
+<td>Nome do profissional.</td>
+</tr>
+<tr>
+<td><code>pe_cnes</code></td>
+<td><code>int64</code></td>
+<td>Código CNES da unidade ou estabelecimento.</td>
+</tr>
+<tr>
+<td><code>pe_cbo</code></td>
+<td><code>int64</code></td>
+<td>Código Brasileiro de Ocupações.</td>
+</tr>
+<tr>
+<td><code>pe_jornada_semanal</code></td>
+<td><code>int64</code></td>
+<td>Carga horária semanal.</td>
+</tr>
+<tr>
+<td><code>pe_salario_base</code></td>
+<td><code>double</code></td>
+<td>Salário base do profissional.</td>
+</tr>
+<tr>
+<td><code>pe_remuneracao_mensal</code></td>
+<td><code>double</code></td>
+<td>Remuneração mensal.</td>
+</tr>
+<tr>
+<td><code>pe_insalubridade</code></td>
+<td><code>double</code></td>
+<td>Valor do adicional de insalubridade.</td>
+</tr>
+<tr>
+<td><code>pe_adicional_noturno</code></td>
+<td><code>double</code></td>
+<td>Valor do adicional noturno.</td>
+</tr>
+<tr>
+<td><code>pe_encargo_patronal</code></td>
+<td><code>double</code></td>
+<td>Encargo patronal.</td>
+</tr>
+<tr>
+<td><code>pe_encargo_trabalhista</code></td>
+<td><code>double</code></td>
+<td>Encargo trabalhista.</td>
+</tr>
+<tr>
+<td><code>pe_vantagem_fixa</code></td>
+<td><code>double</code></td>
+<td>Valor de vantagens fixas.</td>
+</tr>
+<tr>
+<td><code>pe_vantagem_variavel</code></td>
+<td><code>double</code></td>
+<td>Valor de vantagens variáveis.</td>
+</tr>
+<tr>
+<td><code>pe_complemento_mensal</code></td>
+<td><code>double</code></td>
+<td>Complemento mensal.</td>
+</tr>
+<tr>
+<td><code>pe_contrato</code></td>
+<td><code>string</code></td>
+<td>Número ou identificação do contrato.</td>
+</tr>
+<tr>
+<td><code>pe_organizacao_social</code></td>
+<td><code>string</code></td>
+<td>Organização social responsável.</td>
+</tr>
+<tr>
+<td><code>pe_uo</code></td>
+<td><code>int64</code></td>
+<td>Código da unidade orçamentária.</td>
+</tr>
+<tr>
+<td><code>pe_pt</code></td>
+<td><code>string</code></td>
+<td>Programa de trabalho ou classificação PT.</td>
+</tr>
+<tr>
+<td><code>pe_subsecretaria</code></td>
+<td><code>string</code></td>
+<td>Subsecretaria responsável.</td>
+</tr>
+<tr>
+<td><code>pe_unidade_saude</code></td>
+<td><code>string</code></td>
+<td>Unidade de saúde vinculada.</td>
+</tr>
+<tr>
+<td><code>rfr_id_referencia</code></td>
+<td><code>dateTime</code></td>
+<td>Data de referência da remuneração.</td>
+</tr>
+<tr>
+<td><code>Codigo_OS</code></td>
+<td><code>int64</code></td>
+<td>Código numérico padronizado da organização social.</td>
+</tr>
+<tr>
+<td><code>ID</code></td>
+<td><code>string</code></td>
+<td>Identificador composto do registro.</td>
+</tr>
+<tr>
+<td><code>Chave_Contrato</code></td>
+<td><code>string</code></td>
+<td>Chave composta de organização social e contrato.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dimensoes">Dimensões</h2>
+<h3 id="dim_contrato"><code>dim_contrato</code></h3>
+<p>Dimensão de contratos usada para relacionar as tabelas transacionais.</p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Chave_Contrato</code></td>
+<td><code>string</code></td>
+<td>Chave única da combinação entre organização social e contrato.</td>
+</tr>
+<tr>
+<td><code>Codigo_Os</code></td>
+<td><code>int64</code></td>
+<td>Código numérico da organização social do contrato.</td>
+</tr>
+<tr>
+<td><code>Instrumento</code></td>
+<td><code>string</code></td>
+<td>Instrumento associado ao contrato.</td>
+</tr>
+<tr>
+<td><code>Nome_Os</code></td>
+<td><code>string</code></td>
+<td>Nome da organização social.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dim_instituicao"><code>dim_instituição</code></h3>
+<p>Dimensão de organizações sociais. Derivada a partir de <code>Repasses</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Nome_Os</code></td>
+<td><code>string</code></td>
+<td>Nome da organização social.</td>
+</tr>
+<tr>
+<td><code>Codigo_Os</code></td>
+<td><code>int64</code></td>
+<td>Código numérico da organização social.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dim_data"><code>dim_data</code></h3>
+<p>Calendário oficial usado nos relacionamentos de data do modelo.</p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Data</code></td>
+<td><code>dateTime</code></td>
+<td>Data do calendário oficial.</td>
+</tr>
+<tr>
+<td><code>Ano</code></td>
+<td><code>int64</code></td>
+<td>Ano da data.</td>
+</tr>
+<tr>
+<td><code>Mes_Numero</code></td>
+<td><code>int64</code></td>
+<td>Número do mês.</td>
+</tr>
+<tr>
+<td><code>Mes_Nome</code></td>
+<td><code>string</code></td>
+<td>Nome do mês.</td>
+</tr>
+<tr>
+<td><code>Ano_Mes</code></td>
+<td><code>string</code></td>
+<td>Rótulo de ano e mês para análise.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tabela-auxiliar">Tabela auxiliar</h2>
+<h3 id="medida"><code>Medida</code></h3>
+<p>Tabela técnica criada no Power BI para apoio ao modelo.</p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Coluna 1</code></td>
+<td><code>null</code></td>
+<td>Coluna auxiliar aguardando desenvolvimento de medida.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="observacoes">Observações</h2>
+<ul>
+<li>Os nomes das colunas foram preservados exatamente como aparecem no modelo.</li>
+<li>Os tipos das colunas calculadas foram documentados conforme o uso observado no modelo; por exemplo, <code>Codigo_OS</code> é inteiro e <code>ID</code> é texto composto.</li>
+<li>As descrições são funcionais e devem ser revisadas pelo responsável de negócio quando houver definição formal da origem.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
