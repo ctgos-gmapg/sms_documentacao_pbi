@@ -1,0 +1,63 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Erros nas consultas que foram carregadas em 22/09/2026 16:12:13.
+queryGroup 'Erros na Consulta - 22/09/2026 16:12:13'
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// Erros nas consultas que foram carregadas em 22/09/2026 16:13:05.
+queryGroup 'Erros na Consulta - 22/09/2026 16:13:05'
+
+	annotation PBI_QueryGroupOrder = 1
+
+/// Erros nas consultas que foram carregadas em 30/09/2026 10:49:19.
+queryGroup 'Erros na Consulta - 30/09/2026 10:49:19'
+
+	annotation PBI_QueryGroupOrder = 2
+
+/// Erros nas consultas que foram carregadas em 30/09/2026 16:08:18.
+queryGroup 'Erros na Consulta - 30/09/2026 16:08:18'
+
+	annotation PBI_QueryGroupOrder = 3
+
+/// Erros nas consultas que foram carregadas em 30/09/2026 16:27:57.
+queryGroup 'Erros na Consulta - 30/09/2026 16:27:57'
+
+	annotation PBI_QueryGroupOrder = 4
+
+/// Erros nas consultas que foram carregadas em 30/09/2026 16:42:45.
+queryGroup 'Erros na Consulta - 30/09/2026 16:42:45'
+
+	annotation PBI_QueryGroupOrder = 5
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Repasses","Receitas_Painel","Despesas_Painel","Piso_Enfermagem","Erros em Repasses","Erros em Repasses (2)","Erros em Repasses (3)","Erros em Repasses (4)","Erros em Repasses (5)","Erros em Repasses (6)","Medida"]
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+ref table DateTableTemplate_d4c0fad3-802a-4740-8dd2-63ee94c6ca89
+ref table Repasses
+ref table LocalDateTable_352b1915-e2b2-47fc-a896-cc9cbff7c213
+ref table LocalDateTable_3a15af51-8c15-4807-94b0-98150220f933
+ref table Receitas_Painel
+ref table Despesas_Painel
+ref table LocalDateTable_54005742-580b-4c7d-bc36-e5219ada24b4
+ref table LocalDateTable_90bd83ca-e7c1-497d-88f6-eb2b244c254e
+ref table LocalDateTable_49c3b514-a465-4be7-abe4-610f6713b039
+ref table LocalDateTable_977898a1-eba6-4b39-8080-c224476492de
+ref table Piso_Enfermagem
+ref table dim_instituição
+ref table dim_data
+ref table dim_contrato
+ref table Medida
+
+ref cultureInfo pt-BR
+

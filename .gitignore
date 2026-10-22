@@ -1,0 +1,89 @@
+# =========================
+# Python / Poetry
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+
+# Cache / ferramentas Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# MkDocs
+# =========================
+
+site/
+
+# =========================
+# IDEs / Editores
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# Sistema operacional
+# =========================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# =========================
+# Temporários
+# =========================
+
+*.tmp
+*.temp
+*.log
+~$*
+*.bak
+
+# =========================
+# Power BI
+# =========================
+
+# Arquivos locais/temporários do Power BI
+*.pbix
+*.pbit
+
+# Cache local do Power BI / Fabric
+**/.pbi/
+**/.cache/
+
+# =========================
+# Credenciais / ambiente
+# =========================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# Build / distribuição
+# =========================
+
+build/
+dist/
+*.egg-info/

@@ -1,0 +1,326 @@
+table Repasses
+	lineageTag: 69dff8be-bdb0-4f0f-8e47-6477f595b764
+
+	column UG
+		dataType: int64
+		formatString: 0
+		lineageTag: 533df5ad-9017-4e8a-b823-11c09afb6bfc
+		summarizeBy: sum
+		sourceColumn: UG
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNIDADE
+		dataType: string
+		lineageTag: e12c3f33-d27e-4d9b-9d43-c6cf18a54ca2
+		summarizeBy: none
+		sourceColumn: UNIDADE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FAVORECIDO
+		dataType: string
+		lineageTag: 9028de14-b1bd-4a7e-89bb-743dd065f7b4
+		summarizeBy: none
+		sourceColumn: FAVORECIDO
+
+		annotation SummarizationSetBy = Automatic
+
+	column INSTRUMENTO
+		dataType: string
+		lineageTag: ecd3c00a-2036-4ceb-8ae7-96cc83310438
+		summarizeBy: none
+		sourceColumn: INSTRUMENTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUBSECRETARIA
+		dataType: string
+		lineageTag: 45e55d9c-04b0-4c2c-bce6-5a6a7d951a88
+		summarizeBy: none
+		sourceColumn: SUBSECRETARIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PROCESSO SEI'
+		dataType: string
+		lineageTag: 870dee7b-3841-448a-82b5-fd7eb44eedc7
+		summarizeBy: none
+		sourceColumn: PROCESSO SEI
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXERCÍCIO
+		dataType: int64
+		formatString: 0
+		lineageTag: 063f1ad9-0f2d-4703-a6e0-5743b56cf579
+		summarizeBy: sum
+		sourceColumn: EXERCÍCIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TERMO ADITIVO'
+		dataType: string
+		lineageTag: 23cc465d-dfb1-423c-8a11-46e9fe19d996
+		summarizeBy: none
+		sourceColumn: TERMO ADITIVO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NATUREZA DE DESPESA'
+		dataType: string
+		lineageTag: f805899c-ae04-4749-85ff-8b063e2c7e57
+		summarizeBy: none
+		sourceColumn: NATUREZA DE DESPESA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DOCUMENTO DE REPASSE'
+		dataType: string
+		lineageTag: 919f92f8-3450-4015-b619-d28549153a7d
+		summarizeBy: none
+		sourceColumn: DOCUMENTO DE REPASSE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DOC.SEI DOCUMENTO REPASSE'
+		dataType: int64
+		formatString: 0
+		lineageTag: d9271509-80a8-46e2-963f-b455a16e9e0d
+		summarizeBy: sum
+		sourceColumn: DOC.SEI DOCUMENTO REPASSE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DOC.SEI RESPONSÁVEL ASSINATURA ELD'
+		dataType: int64
+		formatString: 0
+		lineageTag: 34ae4b06-63ae-4e36-ac41-efd0c345c4e9
+		summarizeBy: sum
+		sourceColumn: DOC.SEI RESPONSÁVEL ASSINATURA ELD
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPENHO
+		dataType: string
+		lineageTag: a4a5b209-6dfd-4c09-b4be-18e02a10f034
+		summarizeBy: none
+		sourceColumn: EMPENHO
+
+		annotation SummarizationSetBy = Automatic
+
+	column FONTE
+		dataType: int64
+		formatString: 0
+		lineageTag: 16165ff3-152d-469a-a20b-7054bd1ffd47
+		summarizeBy: sum
+		sourceColumn: FONTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMPETÊNCIA
+		dataType: string
+		lineageTag: 3e3d9143-6dcd-4481-9bfc-070d26b46a9f
+		summarizeBy: none
+		sourceColumn: COMPETÊNCIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALOR
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 5024d68f-30ac-4743-8da4-5bf6e29fd223
+		summarizeBy: sum
+		sourceColumn: VALOR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column 'Nº NL'
+		dataType: string
+		lineageTag: eb3b969e-0ca3-4df1-8646-baed1f5a47a1
+		summarizeBy: none
+		sourceColumn: Nº NL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EMISSOR DA NL'
+		dataType: string
+		lineageTag: 03e62933-383c-4c4b-b23d-e19f49a4a886
+		summarizeBy: none
+		sourceColumn: EMISSOR DA NL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº NL ANULADA'
+		dataType: string
+		lineageTag: 6cc9d613-6776-4f60-ba9c-f32821021cd1
+		summarizeBy: none
+		sourceColumn: Nº NL ANULADA
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS
+		dataType: string
+		lineageTag: 6e0e53d5-21f4-436e-baed-6df08d3659ec
+		summarizeBy: none
+		sourceColumn: STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº DA PD'
+		dataType: string
+		lineageTag: 67bd9fa0-11e8-4ffc-b330-4b32cba998bb
+		summarizeBy: none
+		sourceColumn: Nº DA PD
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DATA DA PD'
+		dataType: string
+		lineageTag: 658f466f-d504-4812-92f8-a87e51cf9352
+		summarizeBy: none
+		sourceColumn: DATA DA PD
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EMISSOR DA PD'
+		dataType: string
+		lineageTag: bafcd495-5a7a-4e12-856b-1cd8eee5150a
+		summarizeBy: none
+		sourceColumn: EMISSOR DA PD
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº PD ANULADA'
+		dataType: string
+		lineageTag: bc8a7fa6-99ce-41ec-86bc-967e1cafd9ed
+		summarizeBy: none
+		sourceColumn: Nº PD ANULADA
+
+		annotation SummarizationSetBy = Automatic
+
+	column GD
+		dataType: string
+		lineageTag: 7bee4ac9-3ed1-4e16-89fd-12cfae8fdda1
+		summarizeBy: none
+		sourceColumn: GD
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLOQUEIO
+		dataType: string
+		lineageTag: 774ae808-a255-4fac-9190-691a30641c41
+		summarizeBy: none
+		sourceColumn: BLOQUEIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DATA DE PAGAMENTO'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c6b0e347-ce5d-48cc-a8d2-b8c490c01d68
+		summarizeBy: none
+		sourceColumn: DATA DE PAGAMENTO
+
+		variation Variation
+			isDefault
+			relationship: afb6d596-14a4-458e-999e-30ff23c4da1c
+			defaultHierarchy: LocalDateTable_352b1915-e2b2-47fc-a896-cc9cbff7c213.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7c23b54a-7a8f-450c-af9f-859ccc0976da
+		summarizeBy: none
+		sourceColumn: DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA
+
+		variation Variation
+			isDefault
+			relationship: da69e829-8fc0-4b63-84c6-69b237edbed7
+			defaultHierarchy: LocalDateTable_3a15af51-8c15-4807-94b0-98150220f933.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'QUANTIDADE DE FRAGILIDADE'
+		dataType: int64
+		formatString: 0
+		lineageTag: f80f2fb7-b144-4210-9ff0-3859cbc18855
+		summarizeBy: sum
+		sourceColumn: QUANTIDADE DE FRAGILIDADE
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBSERVAÇÃO
+		dataType: string
+		lineageTag: 2f2cff3d-b817-44b9-b144-5d45eaa65095
+		summarizeBy: none
+		sourceColumn: OBSERVAÇÃO
+
+		annotation SummarizationSetBy = Automatic
+
+	column Codigo_OS = IF(Repasses[FAVORECIDO] = "IGEDES INSTITUTO DE GESTAO E DESENVOLVIMENTO (ANTIGO IDEIAS)", 10040, IF(Repasses[FAVORECIDO] = "VIVA RIO", 264, IF(Repasses[FAVORECIDO] = "SPDM", 263, IF(Repasses[FAVORECIDO] = "GNOSIS", 9615, IF(Repasses[FAVORECIDO] = "FAS (ANTIGAS CEPP E CEP28)", 265, IF(Repasses[FAVORECIDO] = "CEJAM", 268, IF(Repasses[FAVORECIDO] = "RIOSAÚDE", 9612, IF(Repasses[FAVORECIDO] = "CENTRO INTEGRADO DE ESTUDO E PROGRAMAS DE DESENVOLVIMENTO SUSTENTáVEL - CIEDS", 10358, 0))))))))
+		formatString: 0
+		lineageTag: 503948fb-fbd6-46ff-9a60-6a0dd531fae0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID =
+			
+			VAR IdPadrao = Repasses[Codigo_OS] & Repasses[INSTRUMENTO] & FORMAT(Repasses[DATA DE PAGAMENTO], "yyyy-mm")
+			RETURN
+			    // Ajuste pontual: repasses do VIVA RIO 015/2023-TC pagos em nov/2023 entram na chave de dez/2023
+			    IF(IdPadrao = "264015/2023-TC2023-11", "264015/2023-TC2023-12", IdPadrao)
+		lineageTag: 7fbb82fd-897e-4afa-8288-c78670bbf95e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano_Mes_Ref =
+			
+			VAR MesPagamento = DATE(YEAR(Repasses[DATA DE PAGAMENTO]), MONTH(Repasses[DATA DE PAGAMENTO]), 1)
+			RETURN
+			    IF(
+			        ISBLANK(Repasses[DATA DE PAGAMENTO]),
+			        BLANK(),
+			        // Ajuste pontual: repasses do VIVA RIO 015/2023-TC pagos em nov/2023 contam em dez/2023
+			        IF(
+			            Repasses[Codigo_OS] = 264 && Repasses[INSTRUMENTO] = "015/2023-TC" && MesPagamento = DATE(2023, 11, 1),
+			            DATE(2023, 12, 1),
+			            MesPagamento
+			        )
+			    )
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 8b6f8394-fad4-48e7-bd06-eb19b68fb81d
+		summarizeBy: none
+
+	column Chave_Contrato = Repasses[Codigo_OS] & "|" & Repasses[INSTRUMENTO]
+		dataType: string
+		lineageTag: 3f46fd0f-5115-48bf-9c5c-a4c8e2bf10ef
+		summarizeBy: none
+
+	partition Repasses = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vQlJcuioOz1wduDv3XAC7pG0mnUyGB9pAyHukOPHC26YfBx_zL7j6hlFEOuBYxkcuEz4ASC931uxh6B/pub?gid=0&single=true&output=csv"),[Delimiter=",", Columns=37, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"UG", Int64.Type}, {"UNIDADE", type text}, {"CNPJ (14 DÍGITOS)", Int64.Type}, {"FAVORECIDO", type text}, {"INSTRUMENTO", type any}, {"SUBSECRETARIA", type text}, {"PROCESSO SEI", type text}, {"EXERCÍCIO", Int64.Type}, {"TERMO ADITIVO", type text}, {"DOC.SEI TERMO ADITIVO", Int64.Type}, {"DOC.SEI PLANILHA MS", Int64.Type}, {"NATUREZA DE DESPESA", type any}, {"DOCUMENTO DE REPASSE", type text}, {"DOC.SEI DOCUMENTO REPASSE", Int64.Type}, {"DOC.SEI RESPONSÁVEL ASSINATURA ELD", Int64.Type}, {"DOC.SEI ELD", Int64.Type}, {"EMPENHO", type text}, {"DOC.SEI EMPENHO", Int64.Type}, {"FONTE", Int64.Type}, {"PARCELA", Int64.Type}, {"COMPETÊNCIA", type text}, {"VALOR", type number}, {"Nº NL", type text}, {"DATA DA NL", type date}, {"EMISSOR DA NL", type text}, {"Nº NL ANULADA", type text}, {"STATUS", type text}, {"Nº DA PD", type text}, {"DATA DA PD", type any}, {"EMISSOR DA PD", type text}, {"Nº PD ANULADA", type text}, {"GD", type text}, {"BLOQUEIO", type any}, {"DATA DE PAGAMENTO", type date}, {"DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA", type date}, {"QUANTIDADE DE FRAGILIDADE", Int64.Type}, {"OBSERVAÇÃO", type text}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each ([INSTRUMENTO] <> null)),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Linhas Filtradas",{"CNPJ (14 DÍGITOS)", "DOC.SEI TERMO ADITIVO", "DOC.SEI PLANILHA MS", "DOC.SEI ELD", "DOC.SEI EMPENHO", "PARCELA", "DATA DA NL"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

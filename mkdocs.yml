@@ -1,0 +1,68 @@
+site_name: Documentação Power BI — CTGOS
+site_description: Documentação técnica e funcional dos painéis de Inteligência da GMAPG
+site_author: Breno Almeida
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: pt-BR
+  logo: design/manual_marca/logo.png
+  
+  font:
+    text: Montserrat
+    code: Roboto Mono
+
+extra_css:
+  - assets/stylesheets/extra.css
+  
+nav:
+  - Início: index.md
+
+  - Painéis:
+      - Piso da Enfermagem:
+          - Visão geral: paineis/piso_enfermagem_pbi/README.md
+          - Contexto: paineis/piso_enfermagem_pbi/docs/01_contexto_do_sistema.md
+          - Fontes de dados: paineis/piso_enfermagem_pbi/docs/02_sistemas_de_origem.md
+          - Modelo semântico: paineis/piso_enfermagem_pbi/docs/03_modelo_semantico.md
+          - Transformações: paineis/piso_enfermagem_pbi/docs/04_transformacoes.md
+          - Qualidade dos dados: paineis/piso_enfermagem_pbi/docs/05_qualidade_dos_dados.md
+          - Pontos de atenção: paineis/piso_enfermagem_pbi/docs/06_pontos_de_atencao.md
+          - Relacionamentos: paineis/piso_enfermagem_pbi/engenharia_dados/relacionamentos_do_modelo.md
+
+  - Desenvolvimento:
+      - Google Sheets via JSON: configuracoes/conexoes/api_sheets_json.md
+
+  - Boas Práticas:
+      - Documentação: boas_praticas/modelo_documentacao.md
+      - Identidade visual: design/manual_marca/id_visual.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang: pt
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+
+  - pymdownx.details
+  - pymdownx.superfences
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

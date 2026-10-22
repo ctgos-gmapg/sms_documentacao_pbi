@@ -1,0 +1,229 @@
+table Piso_Enfermagem
+	lineageTag: 76db4174-aa8b-46b2-9eb3-24d22daa6c5a
+
+	column pe_cpf
+		dataType: string
+		lineageTag: cb2d540b-679d-4def-8fcc-6a72a1feb29d
+		summarizeBy: none
+		sourceColumn: pe_cpf
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_nome
+		dataType: string
+		lineageTag: c1427508-59eb-47bf-87b7-a1cc16ea71e3
+		summarizeBy: none
+		sourceColumn: pe_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_cnes
+		dataType: int64
+		formatString: 0
+		lineageTag: fb764c15-28e1-4a24-a78f-77688e1737fa
+		summarizeBy: sum
+		sourceColumn: pe_cnes
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_cbo
+		dataType: int64
+		formatString: 0
+		lineageTag: d5774bdb-d624-4944-a808-6c45fd386155
+		summarizeBy: sum
+		sourceColumn: pe_cbo
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_jornada_semanal
+		dataType: int64
+		formatString: 0
+		lineageTag: d45c6afb-1297-4430-93c1-6d0c01d36351
+		summarizeBy: sum
+		sourceColumn: pe_jornada_semanal
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_salario_base
+		dataType: double
+		lineageTag: d7be296d-a5c0-43f9-91c0-56f1dc4eaf7a
+		summarizeBy: sum
+		sourceColumn: pe_salario_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pe_remuneracao_mensal
+		dataType: double
+		lineageTag: efa37e99-49f6-42d4-8a85-18e60214c118
+		summarizeBy: sum
+		sourceColumn: pe_remuneracao_mensal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pe_insalubridade
+		dataType: double
+		lineageTag: a835e36e-35fa-4625-82cd-c032398e87c1
+		summarizeBy: sum
+		sourceColumn: pe_insalubridade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pe_adicional_noturno
+		dataType: double
+		lineageTag: 2d4a7da6-0dfd-4621-a567-2cb18a1b46b5
+		summarizeBy: sum
+		sourceColumn: pe_adicional_noturno
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pe_encargo_patronal
+		dataType: double
+		lineageTag: 61a772b6-209e-4f86-9056-86ec3c1c9e95
+		summarizeBy: sum
+		sourceColumn: pe_encargo_patronal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pe_encargo_trabalhista
+		dataType: double
+		lineageTag: 946d6bb9-ca2e-4017-80c9-1921b0d9b2b0
+		summarizeBy: sum
+		sourceColumn: pe_encargo_trabalhista
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pe_vantagem_fixa
+		dataType: double
+		lineageTag: 00daec44-afd2-48f7-b0bf-8971050bf545
+		summarizeBy: sum
+		sourceColumn: pe_vantagem_fixa
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pe_vantagem_variavel
+		dataType: double
+		lineageTag: d5db837c-6472-45e5-8c11-797b486dea98
+		summarizeBy: sum
+		sourceColumn: pe_vantagem_variavel
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pe_complemento_mensal
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: bdf4963d-706a-426f-8e5e-cfae7675223f
+		summarizeBy: sum
+		sourceColumn: pe_complemento_mensal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column pe_contrato
+		dataType: string
+		lineageTag: 9504adfc-0207-46f6-87d2-61e72977eede
+		summarizeBy: none
+		sourceColumn: pe_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_organizacao_social
+		dataType: string
+		lineageTag: 1d4fed14-3e9b-4e1b-88fc-c6961b912667
+		summarizeBy: none
+		sourceColumn: pe_organizacao_social
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_uo
+		dataType: int64
+		formatString: 0
+		lineageTag: 77073837-354f-47cf-a1c9-a79ecdc0f90e
+		summarizeBy: sum
+		sourceColumn: pe_uo
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_pt
+		dataType: string
+		lineageTag: 1e39a33b-04d3-4de4-85b4-03c4e5763f05
+		summarizeBy: none
+		sourceColumn: pe_pt
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_subsecretaria
+		dataType: string
+		lineageTag: 25f6a1f0-a1f1-4070-8a07-cf673f1bde8a
+		summarizeBy: none
+		sourceColumn: pe_subsecretaria
+
+		annotation SummarizationSetBy = Automatic
+
+	column pe_unidade_saude
+		dataType: string
+		lineageTag: 3b8153f2-b856-4ec3-8152-6de75453ac98
+		summarizeBy: none
+		sourceColumn: pe_unidade_saude
+
+		annotation SummarizationSetBy = Automatic
+
+	column rfr_id_referencia
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5f5ba313-c24c-41b1-8b27-63027e50a69c
+		summarizeBy: none
+		sourceColumn: rfr_id_referencia
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Codigo_OS = IF(OR(Piso_Enfermagem[pe_organizacao_social] = "IGEDES", Piso_Enfermagem[pe_organizacao_social] = "IDEIAS"), 10040, IF(Piso_Enfermagem[pe_organizacao_social] = "VIVARIO", 264, IF(Piso_Enfermagem[pe_organizacao_social] = "SPDM", 263, IF(Piso_Enfermagem[pe_organizacao_social] = "GNOSIS", 9615, IF(Piso_Enfermagem[pe_organizacao_social] = "FAS", 265, IF(Piso_Enfermagem[pe_organizacao_social] = "CEJAM", 268, IF(Piso_Enfermagem[pe_organizacao_social] = "RIOSAUDE", 9612, 0)))))))
+		formatString: 0
+		lineageTag: af2b9d4b-1478-4f49-87a7-edb45d7d3316
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID = Piso_Enfermagem[Codigo_OS]&Piso_Enfermagem[pe_contrato]&FORMAT(Piso_Enfermagem[rfr_id_referencia], "yyyy-mm")
+		lineageTag: 9912dc97-7c62-42b7-99cd-bab1ed28fe1b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Chave_Contrato = Piso_Enfermagem[Codigo_OS] & "|" & Piso_Enfermagem[pe_contrato]
+		dataType: string
+		lineageTag: b1c88705-0435-4fdc-8497-7c36c791f664
+		summarizeBy: none
+
+	partition Piso_Enfermagem = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("10.1.72.202:9203", "ctgos"),
+				    public_rh_pisoenfermagem = Fonte{[Schema="public",Item="rh_pisoenfermagem"]}[Data],
+				    #"Valor Substituído" = Table.ReplaceValue(public_rh_pisoenfermagem,"VIVA RIO","VIVARIO",Replacer.ReplaceText,{"pe_organizacao_social"})
+				in
+				    #"Valor Substituído"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,78 @@
+relationship afb6d596-14a4-458e-999e-30ff23c4da1c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Repasses.'DATA DE PAGAMENTO'
+	toColumn: LocalDateTable_352b1915-e2b2-47fc-a896-cc9cbff7c213.Date
+
+relationship da69e829-8fc0-4b63-84c6-69b237edbed7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Repasses.'DATA DEVOLUÇÃO PROCESSO SUBSECRETARIA'
+	toColumn: LocalDateTable_3a15af51-8c15-4807-94b0-98150220f933.Date
+
+relationship cf5c82a7-aa43-4936-a3d6-b7bd5e13742e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Despesas_Painel.Data_Emissao
+	toColumn: LocalDateTable_54005742-580b-4c7d-bc36-e5219ada24b4.Date
+
+relationship 59415f25-9a44-4b4a-ac82-473ba1342a41
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Despesas_Painel.Data_Vencimento
+	toColumn: LocalDateTable_90bd83ca-e7c1-497d-88f6-eb2b244c254e.Date
+
+relationship a71a1d05-0422-4b61-bb52-f289c89a1711
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Despesas_Painel.Data_Pagamento
+	toColumn: LocalDateTable_49c3b514-a465-4be7-abe4-610f6713b039.Date
+
+relationship 13207843-df3d-4cf4-b2a5-7f5db17206b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Despesas_Painel.Data_Apuracao
+	toColumn: LocalDateTable_977898a1-eba6-4b39-8080-c224476492de.Date
+
+relationship Repasses_Codigo_OS_dim_instituicao
+	fromColumn: Repasses.Codigo_OS
+	toColumn: dim_instituição.Codigo_Os
+
+relationship Piso_Enfermagem_Codigo_OS_dim_instituicao
+	fromColumn: Piso_Enfermagem.Codigo_OS
+	toColumn: dim_instituição.Codigo_Os
+
+relationship Receitas_Painel_cod_unidade_dim_instituicao
+	fromColumn: Receitas_Painel.cod_unidade
+	toColumn: dim_instituição.Codigo_Os
+
+relationship Despesas_Painel_COD_OS_dim_instituicao
+	fromColumn: Despesas_Painel.COD_OS
+	toColumn: dim_instituição.Codigo_Os
+
+relationship Repasses_Chave_Contrato_dim_contrato
+	fromColumn: Repasses.Chave_Contrato
+	toColumn: dim_contrato.Chave_Contrato
+
+relationship Despesas_Painel_Chave_Contrato_dim_contrato
+	fromColumn: Despesas_Painel.Chave_Contrato
+	toColumn: dim_contrato.Chave_Contrato
+
+relationship Receitas_Painel_Chave_Contrato_dim_contrato
+	fromColumn: Receitas_Painel.Chave_Contrato
+	toColumn: dim_contrato.Chave_Contrato
+
+relationship Piso_Enfermagem_Chave_Contrato_dim_contrato
+	fromColumn: Piso_Enfermagem.Chave_Contrato
+	toColumn: dim_contrato.Chave_Contrato
+
+relationship Repasses_Ano_Mes_Ref_dim_data
+	fromColumn: Repasses.Ano_Mes_Ref
+	toColumn: dim_data.Data
+
+relationship Receitas_Painel_Ano_Mes_Ref_dim_data
+	fromColumn: Receitas_Painel.Ano_Mes_Ref
+	toColumn: dim_data.Data
+
+relationship Despesas_Painel_Ano_Mes_Ref_dim_data
+	fromColumn: Despesas_Painel.Ano_Mes_Ref
+	toColumn: dim_data.Data
+
+relationship Piso_Enfermagem_rfr_id_referencia_dim_data
+	fromColumn: Piso_Enfermagem.rfr_id_referencia
+	toColumn: dim_data.Data
+

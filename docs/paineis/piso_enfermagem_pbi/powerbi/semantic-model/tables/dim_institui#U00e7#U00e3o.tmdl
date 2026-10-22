@@ -1,0 +1,27 @@
+table dim_instituição
+	lineageTag: 25279c53-31bd-48dc-80d1-c3c40d7f39b0
+
+	column Nome_Os
+		lineageTag: 1e597664-ea14-4343-9238-bf5cf92bcd1a
+		isNameInferred
+		sourceColumn: [Nome_Os]
+
+	column Codigo_Os
+		formatString: 0
+		lineageTag: 5963b0bc-0c35-4e4b-adbc-911b5cba9fa4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Codigo_Os]
+
+	partition dim_instituição = calculated
+		mode: import
+		source =
+				
+				DISTINCT(
+				    SELECTCOLUMNS(
+				        Repasses,
+				        "Nome_Os", Repasses[FAVORECIDO],
+				        "Codigo_Os", Repasses[Codigo_OS]
+				    )
+				)
+
