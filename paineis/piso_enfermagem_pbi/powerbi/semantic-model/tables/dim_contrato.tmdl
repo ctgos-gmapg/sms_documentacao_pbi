@@ -1,0 +1,46 @@
+table dim_contrato
+	lineageTag: 82a8929b-7561-4a4f-b3b0-ad6fe4350d05
+
+	column Chave_Contrato
+		lineageTag: 52286c21-a8a8-40ca-8b36-7860e36e18ea
+		isNameInferred
+		sourceColumn: [Chave_Contrato]
+
+	column Codigo_Os
+		formatString: 0
+		lineageTag: 9314204f-77c3-4bd9-90f8-7b305bad37f8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Codigo_Os]
+
+	column Instrumento
+		lineageTag: 7a3e1865-7c9f-427a-92f6-b5a1279af6c1
+		isNameInferred
+		sourceColumn: [Instrumento]
+
+	column Nome_Os
+		lineageTag: 3120d4f5-732b-4b88-a5a0-282ad7bf01c7
+		isNameInferred
+		sourceColumn: [Nome_Os]
+
+	partition dim_contrato = calculated
+		mode: import
+		source =
+				
+				VAR Chaves =
+				    DISTINCT(
+				        UNION(
+				            DISTINCT(Repasses[Chave_Contrato]),
+				            DISTINCT(Despesas_Painel[Chave_Contrato]),
+				            DISTINCT(Receitas_Painel[Chave_Contrato]),
+				            DISTINCT(Piso_Enfermagem[Chave_Contrato])
+				        )
+				    )
+				RETURN
+				    ADDCOLUMNS(
+				        SELECTCOLUMNS(Chaves, "Chave_Contrato", [Chave_Contrato]),
+				        "Codigo_Os", IFERROR(INT(VALUE(LEFT([Chave_Contrato], FIND("|", [Chave_Contrato]) - 1))), BLANK()),
+				        "Instrumento", MID([Chave_Contrato], FIND("|", [Chave_Contrato]) + 1, LEN([Chave_Contrato])),
+				        "Nome_Os", LOOKUPVALUE('dim_instituição'[Nome_Os], 'dim_instituição'[Codigo_Os], IFERROR(INT(VALUE(LEFT([Chave_Contrato], FIND("|", [Chave_Contrato]) - 1))), BLANK()))
+				    )
+

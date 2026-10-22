@@ -1,0 +1,81 @@
+table dim_data
+	lineageTag: 4d9ef9af-e2d3-4b3f-bba3-f4d462fdd2d5
+	dataCategory: Time
+
+	column Data
+		isUnique
+		formatString: dd/mm/yyyy
+		lineageTag: 4b532b88-a86a-48c5-8acf-01cf96d1f208
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Data]
+
+	column Ano
+		formatString: 0
+		lineageTag: 20d54978-b4eb-4a9e-851c-dd9f3cd9f6a6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Numero
+		formatString: 0
+		lineageTag: ea1af5e2-bdb2-4c73-8cae-95e90fa24282
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mes_Numero]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Nome
+		lineageTag: fa8eae75-3b77-4c60-979f-aff11aafe9ee
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes_Nome]
+		sortByColumn: Mes_Numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano_Mes
+		lineageTag: 6ca6533d-97d5-4b12-9080-e77c38698016
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano_Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_data = calculated
+		mode: import
+		source =
+				
+				VAR Datas = {
+				    MIN(Repasses[Ano_Mes_Ref]), MAX(Repasses[Ano_Mes_Ref]),
+				    MIN(Receitas_Painel[Ano_Mes_Ref]), MAX(Receitas_Painel[Ano_Mes_Ref]),
+				    MIN(Despesas_Painel[Ano_Mes_Ref]), MAX(Despesas_Painel[Ano_Mes_Ref]),
+				    MIN(Piso_Enfermagem[rfr_id_referencia]), MAX(Piso_Enfermagem[rfr_id_referencia])
+				}
+				VAR DataMin = MINX(Datas, [Value])
+				VAR DataMax = MAXX(Datas, [Value])
+				
+				RETURN
+				    ADDCOLUMNS(
+				        SELECTCOLUMNS(
+				            CALENDAR(
+				                DATE(YEAR(DataMin), 1, 1),
+				                DATE(YEAR(DataMax), 12, 31)
+				            ),
+				            "Data", [Date]
+				        ),
+				        "Ano", YEAR([Data]),
+				        "Mes_Numero", MONTH([Data]),
+				
+				        "Mes_Nome",
+				            VAR Mes = FORMAT([Data], "mmmm", "pt-BR")
+				            RETURN
+				                UPPER(LEFT(Mes, 1)) &
+				                MID(Mes, 2, LEN(Mes)),
+				
+				        "Ano_Mes", FORMAT([Data], "yyyy-mm")
+				    )
+
