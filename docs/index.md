@@ -1,41 +1,42 @@
 ---
 hide:
+  - navigation
   - toc
 ---
 
-# Documentação - Power BI
+<span class="home-eyebrow">Comece aqui</span>
 
-Portal de documentação técnica e funcional dos projetos de **Inteligência da GMAPG**.
+# Documentação Power BI — CTGOS
 
-Aqui estão centralizadas informações sobre painéis, modelos de dados, fontes, integrações, regras de negócio e padrões utilizados nos projetos Power BI.
+Portal técnico dos projetos de **Inteligência e Business Intelligence da GMAPG**.
 
----
+Reúne documentação de painéis, fontes de dados, modelos, integrações e boas práticas.
 
 <div class="grid cards" markdown>
 
--   :material-view-dashboard:{ .lg .middle } **Painéis**
+-   :material-view-dashboard-outline:{ .lg .middle } **Painéis**
 
     ---
 
-    Documentação técnica e funcional dos painéis desenvolvidos e mantidos pela equipe.
+    Documentação técnica e funcional dos painéis Power BI.
 
     [:octicons-arrow-right-24: Acessar painéis](paineis/piso_enfermagem_pbi/README.md)
 
--   :material-database-cog:{ .lg .middle } **Desenvolvimento**
+-   :material-database-cog-outline:{ .lg .middle } **Desenvolvimento**
 
     ---
 
-    Conexões, APIs, integrações, Gateway, Power BI Service e processos de engenharia de dados.
+    Fontes, conexões, integrações e processos utilizados nos projetos.
 
-    [:octicons-arrow-right-24: Ver documentação](configuracoes/conexoes/api_sheets_json.md)
+    [:octicons-arrow-right-24: Ver desenvolvimento](configuracoes/conexoes/api_sheets_json.md)
 
--   :material-ruler-square:{ .lg .middle } **Boas Práticas**
+-   :material-book-open-variant:{ .lg .middle } **Boas Práticas**
 
     ---
 
-    Convenções utilizadas para documentação, desenvolvimento e manutenção dos projetos.
+    Padrões de documentação, organização e identidade visual.
 
-    [:octicons-arrow-right-24: Consultar padrões](boas_praticas/modelo_documentacao.md)
+    [:octicons-arrow-right-24: Consultar boas práticas](boas_praticas/modelo_documentacao.md)
 
 </div>
 
@@ -45,6 +46,6 @@ Aqui estão centralizadas informações sobre painéis, modelos de dados, fontes
 
 ### Piso da Enfermagem
 
-Documentação das fontes de dados, transformações, modelo semântico, relacionamentos e pontos de atenção do painel.
+Documentação técnica do projeto, incluindo fontes de dados, modelo semântico, transformações, relacionamentos e pontos de atenção.
 
-[**Acessar documentação do projeto →**](paineis/piso_enfermagem_pbi/README.md)
+[**Acessar documentação →**](paineis/piso_enfermagem_pbi/README.md)

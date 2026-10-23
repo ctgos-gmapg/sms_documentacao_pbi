@@ -7,15 +7,43 @@ docs_dir: docs
 theme:
   name: material
   language: pt-BR
-  logo: design/manual_marca/logo.png
-  
+
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.ico
+
   font:
     text: Montserrat
     code: Roboto Mono
 
-extra_css:
-  - assets/stylesheets/extra.css
-  
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Ativar modo escuro
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Ativar modo claro
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
 nav:
   - Início: index.md
 
@@ -29,9 +57,12 @@ nav:
           - Qualidade dos dados: paineis/piso_enfermagem_pbi/docs/05_qualidade_dos_dados.md
           - Pontos de atenção: paineis/piso_enfermagem_pbi/docs/06_pontos_de_atencao.md
           - Relacionamentos: paineis/piso_enfermagem_pbi/engenharia_dados/relacionamentos_do_modelo.md
+          - Conexões e fluxo: paineis/piso_enfermagem_pbi/engenharia_dados/conexoes_e_fluxo.md
+          - Dicionário de dados: paineis/piso_enfermagem_pbi/docs/dicionário/dicionario_de_dados.md
 
   - Desenvolvimento:
-      - Google Sheets via JSON: configuracoes/conexoes/api_sheets_json.md
+      - Conexões e Integrações:
+          - Google Sheets via JSON: configuracoes/conexoes/api_sheets_json.md
 
   - Boas Práticas:
       - Documentação: boas_praticas/modelo_documentacao.md
@@ -42,20 +73,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-
-plugins:
-  - search:
-      lang: pt
-
-markdown_extensions:
-  - admonition
-  - attr_list
-  - md_in_html
-  - tables
+  - def_list
+  - footnotes
 
   - pymdownx.details
   - pymdownx.superfences
@@ -66,3 +85,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: pt
+
+extra_css:
+  - assets/stylesheets/extra.css
