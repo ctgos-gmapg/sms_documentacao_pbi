@@ -194,16 +194,6 @@ Calendário oficial usado nos relacionamentos de data do modelo.
 
 ## Tabela auxiliar
 
-### `Medida`
+### `Medidas`
 
 Tabela técnica criada no Power BI para apoio ao modelo.
-
-| Coluna | Tipo | Descrição |
-|---|---|---|
-| `Coluna 1` | `null` | Coluna auxiliar aguardando desenvolvimento de medida. |
-
-## Observações
-
-- Os nomes das colunas foram preservados exatamente como aparecem no modelo.
-- Os tipos das colunas calculadas foram documentados conforme o uso observado no modelo; por exemplo, `Codigo_OS` é inteiro e `ID` é texto composto.
-- As descrições são funcionais e devem ser revisadas pelo responsável de negócio quando houver definição formal da origem.
