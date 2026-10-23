@@ -6,9 +6,9 @@ hide:
 
 <span class="home-eyebrow">Comece aqui</span>
 
-# Documentação Power BI — CTGOS
+# Documentação - GMAPG
 
-Portal técnico dos projetos de **Dados e Inteligência de Negócios da GMAPG**.
+Portal técnico dos projetos de **Dados e Inteligência de Negócios da CTGOS**.
 
 Reúne documentação de painéis, fontes de dados, modelos, integrações e boas práticas.
 
