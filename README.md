@@ -68,78 +68,9 @@ Contém documentações e procedimentos compartilhados entre diferentes projetos
 
 Essa pasta deve concentrar configurações que não pertencem exclusivamente a um único painel.
 
-### `conexoes/`
-
-Documentação relacionada às diferentes formas de conexão utilizadas pelos projetos.
-
-Exemplos:
-
-- PostgreSQL;
-- APIs REST;
-- Google Sheets;
-- Google Apps Script;
-- arquivos externos;
-- outras fontes de dados.
-
-Podem ser incluídos procedimentos de configuração, exemplos de conexão e particularidades necessárias para utilização no Power BI.
-
-### `gateway/`
-
-Documentação relacionada ao Power BI Gateway.
-
-Exemplos:
-
-- instalação;
-- configuração;
-- criação de fontes de dados;
-- associação com conjuntos de dados;
-- configuração de credenciais;
-- solução de problemas comuns.
-
-### `pbi_service/`
-
-Documentação relacionada ao Power BI Service.
-
-Exemplos:
-
-- publicação;
-- workspaces;
-- atualização agendada;
-- credenciais;
-- permissões;
-- configuração de datasets/modelos semânticos;
-- parametrizações;
-- procedimentos de manutenção.
-
-Configurações específicas de apenas um painel devem permanecer documentadas dentro da pasta correspondente ao projeto.
-
----
-
 ## `design/`
 
 Centraliza os recursos relacionados à identidade visual utilizada nos dashboards.
-
-### `logo/`
-
-Contém arquivos oficiais de logotipo utilizados nos projetos.
-
-Sempre que possível, utilizar os arquivos disponibilizados nesta pasta em vez de criar novas versões ou alterar manualmente os elementos da marca.
-
-### `manual_marca/`
-
-Contém materiais de referência relacionados à identidade visual institucional.
-
-Pode incluir:
-
-- manual da marca;
-- paleta de cores;
-- tipografia;
-- orientações de aplicação;
-- referências visuais.
-
-Os dashboards devem respeitar a identidade institucional e manter consistência visual entre os diferentes projetos.
-
----
 
 ## `paineis/`
 
@@ -223,13 +154,13 @@ O objetivo não é obrigar todos os projetos a possuir exatamente os mesmos arqu
 Para incluir um novo projeto:
 
 1. Criar uma pasta dentro de `paineis/`.
-2. Utilizar nomes em `snake_case`.
+2. Utilizar nome do painel em `snake_case`.
 3. Utilizar o sufixo `_pbi` para identificar projetos Power BI.
 4. Exportar ou organizar o projeto no formato PBIP.
 5. Criar a estrutura necessária para documentação.
 6. Seguir as orientações disponíveis em `boas_praticas/modelo_documentacao.md`.
 7. Criar um `README.md` na raiz do projeto.
-8. Atualizar a seção **Projetos documentados** deste README.
+8. Fazer commit para este repositório.
 
 Exemplo:
 
@@ -242,7 +173,7 @@ paineis/
 
 ## Padrão de nomenclatura
 
-Utilizar preferencialmente:
+Utilizar:
 
 ```text
 snake_case
@@ -309,7 +240,7 @@ A documentação deve priorizar aquilo que exige contexto para ser compreendido.
 
 ## Segurança
 
-Este repositório não deve armazenar informações sensíveis, como:
+Este repositório **não** deve armazenar informações sensíveis, como:
 
 - senhas;
 - tokens de API;
@@ -355,7 +286,7 @@ A documentação deve acompanhar a evolução do projeto.
 
 A documentação deve permitir que outro integrante da equipe consiga compreender:
 
-**o que o painel faz → de onde vêm os dados → como os dados são tratados → como o modelo está estruturado → quais regras são aplicadas → quais dependências existem → como o projeto pode ser mantido.**
+**o que o painel faz → de onde vêm os dados → como os dados são tratados → como o modelo está estruturado → quais regras de negócio são aplicadas → quais dependências existem → como o projeto pode ser mantido.**
 
 O conjunto formado por:
 
