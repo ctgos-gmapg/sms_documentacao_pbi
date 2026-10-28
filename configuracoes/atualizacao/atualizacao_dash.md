@@ -69,21 +69,3 @@ Use essa medida em um **visual de Cartão (Card)** no seu relatório.
 Lembre-se de *ocultar* a medida criada pelo Power Query. 
 
 ---
-
-### 🧠 Por que manter separado?
-
-Sua consulta com o PostgreSQL:
-
-```m
-let
-    Fonte = Odbc.DataSource("Driver={PostgreSQL Unicode(x64)}; Server=10.80.8.32; Port=5432; Database=postgres", [HierarchicalNavigation=true]),
-    postgres_Database = Fonte{[Name="postgres",Kind="Database"]}[Data],
-    riosaude_Schema = postgres_Database{[Name="riosaude",Kind="Schema"]}[Data],
-    irs_dim_produto_estoque_View = riosaude_Schema{[Name="irs_dim_produto_estoque",Kind="View"]}[Data]
-in
-    irs_dim_produto_estoque_View
-```
-
-Não precisa ser alterada. Ela continuará funcionando normalmente, e a **nova consulta `Atualizacao`** servirá apenas para mostrar o horário do último *refresh* da base no Power BI.
-
-Se quiser que eu integre essa data com uma tabela já existente ou formate de forma diferente, posso adaptar.
